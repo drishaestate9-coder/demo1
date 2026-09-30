@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-30T09:02:17.989Z",
+  "date": "2026-09-30T09:38:39.983Z",
   "results": [
     {
       "name": "hero headline visible",
@@ -58,8 +58,8 @@
     },
     {
       "name": "reverse scroll restores hero",
-      "ok": false,
-      "detail": "mean pixel diff=71.15%"
+      "ok": true,
+      "detail": "mean pixel diff=0.92%"
     },
     {
       "name": "destination hidden again after reverse",
@@ -83,7 +83,7 @@
     },
     {
       "name": "nav switches to light tone over content",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {
@@ -98,7 +98,7 @@
     },
     {
       "name": "DESCEND scrolls through the portal",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {

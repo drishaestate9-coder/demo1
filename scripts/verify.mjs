@@ -163,7 +163,17 @@ try {
       ['Connect', '#connect'],
     ]) {
       await page.click(`.nav__group a:text-is("${label}")`)
-      await page.waitForTimeout(3600)
+      // wait for the smooth scroll to arrive (anchor at top, or page bottom for the last section)
+      await page
+        .waitForFunction(
+          (s) =>
+            Math.abs(document.querySelector(s).getBoundingClientRect().top) < 12 ||
+            Math.abs(window.innerHeight + window.scrollY - document.documentElement.scrollHeight) < 4,
+          sel,
+          { timeout: 20000, polling: 250 },
+        )
+        .catch(() => {})
+      await page.waitForTimeout(600)
       const top = await page.evaluate((s) => document.querySelector(s).getBoundingClientRect().top, sel)
       const atBottom = await page.evaluate(() => Math.abs(window.innerHeight + window.scrollY - document.documentElement.scrollHeight) < 4)
       check(`nav "${label}" scrolls to ${sel}`, Math.abs(top) < 12 || atBottom, `top=${Math.round(top)}px`)
@@ -251,7 +261,10 @@ try {
     await page.waitForTimeout(400)
     await shot(page, 'mobile-menu')
     await page.click('#nav-sheet a:text-is("Atelier")')
-    await page.waitForTimeout(3600)
+    await page
+      .waitForFunction(() => Math.abs(document.querySelector('#atelier').getBoundingClientRect().top) < 12, null, { timeout: 20000, polling: 250 })
+      .catch(() => {})
+    await page.waitForTimeout(600)
     const top = await page.evaluate(() => document.querySelector('#atelier').getBoundingClientRect().top)
     const sheetHidden = await page.evaluate(() => document.querySelector('#nav-sheet').hidden)
     check('mobile menu navigates and closes', Math.abs(top) < 12 && sheetHidden, `top=${Math.round(top)}px`)
