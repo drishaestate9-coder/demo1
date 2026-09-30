@@ -1,0 +1,176 @@
+{
+  "date": "2026-09-30T09:02:17.989Z",
+  "results": [
+    {
+      "name": "hero headline visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "preview cards visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "destination hidden at start",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "journey progress at 25%",
+      "ok": true,
+      "detail": "progress=0.250"
+    },
+    {
+      "name": "journey progress at 50%",
+      "ok": true,
+      "detail": "progress=0.500"
+    },
+    {
+      "name": "journey progress at 75%",
+      "ok": true,
+      "detail": "progress=0.750"
+    },
+    {
+      "name": "journey progress at 100%",
+      "ok": true,
+      "detail": "progress=1.000"
+    },
+    {
+      "name": "hero faded after scroll",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "destination heading revealed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "destination cards revealed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pinned scene releases into content",
+      "ok": true,
+      "detail": "#after-portal top=450px"
+    },
+    {
+      "name": "reverse scroll restores hero",
+      "ok": false,
+      "detail": "mean pixel diff=71.15%"
+    },
+    {
+      "name": "destination hidden again after reverse",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nav \"Atelier\" scrolls to #atelier",
+      "ok": true,
+      "detail": "top=0px"
+    },
+    {
+      "name": "nav \"Codex\" scrolls to #codex",
+      "ok": true,
+      "detail": "top=0px"
+    },
+    {
+      "name": "nav \"Connect\" scrolls to #connect",
+      "ok": true,
+      "detail": "top=24px"
+    },
+    {
+      "name": "nav switches to light tone over content",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "nav \"Worlds\" lands on destination",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "emblem returns to top",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "DESCEND scrolls through the portal",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "View Reel opens dialog, Esc closes it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "World Patrons card links in-page",
+      "ok": true,
+      "detail": "#atelier"
+    },
+    {
+      "name": "mobile hero content fully in view",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile no horizontal overflow (hero)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile destination content fully in view",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile no horizontal overflow (destination)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile no horizontal overflow (footer)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile menu navigates and closes",
+      "ok": true,
+      "detail": "top=0px"
+    },
+    {
+      "name": "reduced motion: hero shown without entrance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: veil covers the cut",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: destination revealed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "fallback: hero poster loads",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "fallback: destination poster shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no console errors / failed requests",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "issues": []
+}
