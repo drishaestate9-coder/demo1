@@ -93,6 +93,8 @@ Everything lives in **`src/config/site.config.ts`**.
   - `pointerParallax`, `idleSway`, `warpFov` (extra FOV through the opening) and `bloom` set motion and glow intensity.
   - `entranceDuration` and `descendDuration` set the two automatic animations.
 
+The pinned section also exposes the raw scroll progress as a CSS custom property, `--scroll-progress` (0 to 1) on `.portal`. You can use it for extra CSS-only effects.
+
 To make deeper scene changes:
 - `src/scene/lib/layout.ts` controls the cave's cross-section, which shapes the opening's size and silhouette.
 - `PATH` / `LOOK` in `CameraRig.tsx` set the camera route and framing.

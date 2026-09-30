@@ -72,11 +72,14 @@ async function newPage(opts = {}, label = 'page') {
 async function waitReady(page, webgl = true) {
   for (let i = 0; i < 4; i++) {
     try {
-      if (webgl) await page.waitForFunction(() => window.__dreamReady === true, null, { timeout: 180000 })
+      if (webgl) await page.waitForFunction(() => window.__dreamReady === true, null, { timeout: 120000 })
       await page.waitForFunction(() => typeof window.__portalRange === 'function' && window.__portalRange(), null, { timeout: 30000 })
       return
-    } catch {
-      await page.waitForTimeout(1500) // dev server may reload once while optimising deps
+    } catch (e) {
+      // The dev server may reload once while optimising deps, and software
+      // WebGL occasionally stalls on first compile: reload and try again.
+      console.log(`      (retrying page load: ${String(e.message).split('\n')[0].slice(0, 80)})`)
+      await page.reload({ waitUntil: 'load' }).catch(() => {})
     }
   }
   throw new Error('scene never became ready')
